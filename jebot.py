@@ -29,7 +29,7 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, InlineQuery, InputTextMessageContent
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, InlineQuery, InputTextMessageContent, ParseMode, Update
 
 
 Jebot = Client(
@@ -38,7 +38,7 @@ Jebot = Client(
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
 )
-
+hoto="https://telegra.ph/file/af86973849bc43cc8e3ce.jpg"
 
  #For private messages        
  #Ignore commands
@@ -213,8 +213,8 @@ async def song(client, message):
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
-        reply_photo = "https://telegra.ph/file/af86973849bc43cc8e3ce.jpg"
+       await Jebot.send_message.reply_photo(
+        hoto,
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @JEBotZ.
 
