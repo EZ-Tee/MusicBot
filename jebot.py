@@ -214,6 +214,7 @@ async def song(client, message):
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
+        reply_photo = "https://telegra.ph/file/af86973849bc43cc8e3ce.jpg"
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm a Song Downloader Bot. A bot by @JEBotZ.
 
